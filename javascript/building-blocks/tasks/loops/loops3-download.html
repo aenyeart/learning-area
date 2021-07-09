@@ -41,8 +41,14 @@
 
 
     // Add your code here
-
-
+    do {
+      if (isPrime(i)) {
+        para.textContent += i + ', ';
+      }
+      i--;
+    } while (i > 1);
+    para.textContent = para.textContent.slice(0, -2); // Remove last comma and space
+    
     // Don't edit the code below here!
     let section = document.querySelector('section');
     section.appendChild(para);
